@@ -1,6 +1,15 @@
-import tcod as libtcod
+
+import sys
+
+#make platform independent
+if sys.platform == 'darwin':
+	import tcod as libtcod
+else:
+	import libtcodpy as libtcod
 
 def main():
+
+	print (sys.platform)
 	screen_width = 80
 	screen_height = 50
 
